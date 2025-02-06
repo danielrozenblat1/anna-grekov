@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 3% auto;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  direction: rtl;
+  width: 300px;
+  
+  /* רקע מטאלי */
+  background: linear-gradient(145deg, 
+      #e6e6e6,
+      #ffffff 30%,
+      #f0f0f0 50%,
+      #e6e6e6 70%,
+      #d9d9d9
+  );
+  color: #333333;
+  
+  /* הצללה עדינה */
+  box-shadow: 
+      2px 2px 4px rgba(190, 190, 190, 0.3),
+      -8px -8px 16px rgba(255, 255, 255, 0.4),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+      inset -2px -2px 4px rgba(190, 190, 190, 0.2);
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 10px;
+  width: 80%;
+color:black
+}
+
+.icon {
+  width: 20%;
+  filter: drop-shadow(1px 1px 2px rgba(190, 190, 190, 0.4));
+}
+
+@media (min-width: 350px) and (max-width:450px) {
+  .container {
+      width:300px;
+      padding: 0.4rem 0.8rem;
+  }
+
+  .text {
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .icon {
+      width: 25%;
+      text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+      width: 270px;
+      padding: 0.4rem 0.8rem;
+  }
+
+  .text {
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .icon {
+      width: 30%;
+      text-align: center;
+  }
+}
