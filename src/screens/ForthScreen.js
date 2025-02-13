@@ -7,6 +7,7 @@ import pencil from "../Icons/wired-lineal-35-edit-hover-line.json"
 import lipstick from "../Icons/wired-lineal-1559-lipstick-hover-pinch.json"
 import Benefit from '../components/Benefit/Benefit';
 import Anna from '../components/recommends/Anna';
+import AnnaE from '../components/recommends/AnnaE';
 const ForthScreen = () => {
    
     return <>
@@ -23,6 +24,7 @@ const ForthScreen = () => {
 
 <Benefit/>
 <Anna/>
+<AnnaE/>
 </>
 };
 

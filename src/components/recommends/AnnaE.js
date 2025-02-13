@@ -1,20 +1,21 @@
 import styles from "./Anna.module.css"
-import result1 from "../../images/אנה גרקוב עבודות שפתיים 1.png"
-import result2 from "../../images/אנה גרקוב עבודות שפתיים 2.png"
-import result3 from "../../images/אנה גרקוב עבודות שפתיים 3.png"
-import result4 from "../../images/אנה גרקוב עבודות שפתיים 4.png"
-import result5 from "../../images/אנה גרקוב עבודות שפתיים 5.png"
-import result6 from "../../images/אנה גרקוב עבודות שפתיים 6.png"
-import result7 from "../../images/אנה גרקוב עבודות שפתיים 7.png"
-import result8 from "../../images/אנה גרקוב עבודות שפתיים 8.png"
-import result9 from "../../images/אנה גרקוב עבודות שפתיים 9.png"
+import result1 from "../../images/אנה גרקוב עבודות גבות 1.png"
+import result2 from "../../images/אנה גרקוב עבודות גבות 2.png"
+import result3 from "../../images/אנה גרקוב עבודות גבות 3.png"
+import result4 from "../../images/אנה גרקוב עבודות גבות 4.png"
+import result5 from "../../images/אנה גרקוב עבודות גבות 5.png"
+import result6 from "../../images/אנה גרקוב עבודות גבות 6.png"
+import result7 from "../../images/אנה גרקוב עבודות גבות 7.png"
+import result8 from "../../images/אנה גרקוב עבודות גבות 8.png"
+import result9 from "../../images/אנה גרקוב עבודות גבות 9.png"
+import result10 from "../../images/אנה גרקוב עבודות גבות 10.png"
 
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Button from "../WAbutton/Button"
-const Anna=()=>{
+const AnnaE=()=>{
     const sliderSettings = {
      
         infinite: true,
@@ -71,9 +72,13 @@ const Anna=()=>{
             type: 'image',
             src: result7,
           },
+          {
+            type: 'image',
+            src: result10,
+          },
         ];  
 return <>
-<div className={styles.explain}>הכנתי לך מקבץ קטן של בנות שכבר עשו את הצעד ועשו איפור קבוע לשפתיים</div>
+<div className={styles.explain}>וכמובן.. גם באיפור קבוע לגבות</div>
 <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
           {content.map((item, index) => (
@@ -100,9 +105,9 @@ return <>
           ))}
         </Slider>
       </div>
-          <Button text="אנה אני רוצה לשריין תאריך!" message="היי אנה, הגעתי מהדף! אני רוצה לשריין טיפול פיגמנט שפתיים"/>
+          <Button text="אנה אני רוצה לשריין תאריך!" message="היי אנה, הגעתי מהדף! אני רוצה לשריין טיפול איפור קבוע לגבות"/>
 </>
 
 
 }
-export default Anna
+export default AnnaE
