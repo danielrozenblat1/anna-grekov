@@ -20,7 +20,7 @@ import {
   Trophy
 } from 'lucide-react';
 import styles from './Sillabus.module.css';
-import ThirdScreen from '../../screens/ThirdScreen';
+import ThirdScreen from '../../CoursePage/screens/ThirdScreen';
 import Recommends from '../recommends/Recommends';
 import Button from '../WAbutton/Button';
 

@@ -1,42 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
-import logo from "../../images/גרטה מור לוגו.png"
+import logo from "../../images/אנה גרקוב לוגו.png"
 
-import { FaInstagram, FaFacebook, FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaTimes } from 'react-icons/fa';
 
 const NavBarNew = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 0) {
-            setIsSticky(true);
-          } else {
-            setIsSticky(false);
-          }
-          lastScrollY = window.scrollY;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
     
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -63,19 +43,37 @@ const NavBarNew = () => {
   const menuItems = ['קורס לק גל' ,'קורס אקריל','השתלמויות', 'שאלות תשובות', 'מי אני'];
 
   return (
-    <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ''}`}>
-      {windowWidth <= 850 && (
-        <div className={styles.hamburger} onClick={toggleMenu}>
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      )}
-      {windowWidth <= 850 && (
+    <nav className={styles.navbar}>
+      <div className={styles.navbarInner}>
+        <button className={styles.menuButton} onClick={toggleMenu}>
+          <span className={styles.buttonText}>אנה אני</span>
+          <span className={styles.buttonTextHidden}>בפנים!</span>
+        </button>
+        
         <div className={styles.logo}>
           <img src={logo} alt="Logo" />
         </div>
-      )}
+
+        <div className={styles.socialIcons}>
+          <a href="https://www.instagram.com/m.s_nails_artist/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+            <FaInstagram />
+          </a>
+          <a onClick={handleClick} className={styles.socialIcon}>
+            <FaWhatsapp />
+          </a>
+        </div>
+      </div>
+
       {(isMenuOpen || isClosing) && windowWidth <= 850 && (
         <div className={`${styles.mobileMenu} ${isClosing ? styles.closing : ''}`}>
+          <div className={styles.mobileMenuHeader}>
+            <div className={styles.closeButton} onClick={toggleMenu}>
+              <FaTimes />
+            </div>
+            <div className={styles.mobileMenuLogo}>
+              <img src={logo} alt="מאי שושן לוגו"/>
+            </div>
+          </div>
           <div className={styles.mobileMenuContent}>
             {menuItems.map((item, index) => (
               <ScrollLink 
@@ -90,37 +88,9 @@ const NavBarNew = () => {
                 {item}
               </ScrollLink>
             ))}
-            <div className={styles.center}>
-              <img className={styles.image} src={logo} alt="מאי שושן לוגו"/>
-            </div>
           </div>
         </div>
       )}
-      {windowWidth > 850 && (
-        <div className={styles.menuItems}>
-          {menuItems.map((item, index) => (
-            <ScrollLink 
-              key={index} 
-              offset={-100}
-              to={item} 
-              smooth={true} 
-              duration={500}
-            >
-              {item}
-            </ScrollLink>
-          ))}
-        </div>
-      )}
-      {windowWidth > 1050 && (
-        <div className={styles.logo}>
-          <img src={logo} alt="Logo" />
-        </div>
-      )}
-      <div className={styles.socialIcons}>
-        <a href="https://www.instagram.com/m.s_nails_artist/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a onClick={handleClick}><FaWhatsapp /></a>
-        
-      </div>
     </nav>
   );
 };

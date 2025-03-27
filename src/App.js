@@ -1,21 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import FirstScreen from './screens/FirstScreen';
-import SecondScreen from './screens/SecondScreen';
-import AboutMe from './components/me/Me';
-
-import Syllabus from './components/Sillabus/Sillabus';
-import ForthScreen from './screens/ForthScreen';
-import ByMe from './components/ByMe/ByMe';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CoursePageWrapper from './CoursePage/CoursePageWrapper';
+import HishtalmutPageWrapper from './HishtalmutPage/HishtalmutPageWrapper';
 
 function App() {
   return <>
-    <FirstScreen/>
-    <SecondScreen/>
-    <AboutMe/>
-  <Syllabus/>
-<ForthScreen/>
-<ByMe/>
+   <Router>
+    <Routes>
+   
+    <Route path="/" index element={<CoursePageWrapper/>}/>
+    <Route path="/השתלמות" index element={<HishtalmutPageWrapper/>}/>
+ </Routes>
+ </Router>
   </>
 }
 

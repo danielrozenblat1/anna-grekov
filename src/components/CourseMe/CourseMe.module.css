@@ -1,0 +1,772 @@
+/* About.module.css - Split design with metallic first section */
+
+.pageWrapper {
+  width: 100%;
+  background-color: #000000; /* Dark matte gray background for the entire page */
+  padding: 2rem 0;
+  box-sizing: border-box; /* הוספת box-sizing כדי למנוע השפעה על רוחב האלמנטים */
+  max-width: 100vw; /* מגביל את הרוחב לרוחב החלון */
+  overflow-x: hidden; /* מונע גלילה אופקית במקרה של חריגה */
+}
+
+
+.header {
+  font-size: 3rem;
+  font-family: "Assistant";
+  text-align: center;
+  margin: 0 auto 2%;
+  direction: rtl;
+  color: #f5f5f5;
+  position: relative;
+  text-shadow: 0 0 3px rgba(169, 169, 169, 0.4);
+}
+
+.header:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 35%;
+  right: 35%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(169, 169, 169, 0.5) 50%, 
+    transparent 100%
+  );
+}
+
+/* First container with metallic styling */
+.metallicContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Increased from 1000px to make container wider */
+  margin: 3% auto;
+  border-radius: 20px;
+  gap: 3rem;
+  flex-direction: row-reverse;
+  position: relative;
+  background: linear-gradient(165deg, 
+    rgba(40, 40, 45, 0.7) 0%,
+    rgba(25, 25, 30, 0.8) 100%
+  );
+  padding: 2rem;
+  border: 1px solid rgba(169, 169, 169, 0.2);
+  box-shadow: 
+    inset 0 10px 20px rgba(0, 0, 0, 0.3),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.2),
+    0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  box-sizing: border-box; /* הוספת box-sizing */
+}
+
+.metallicContainer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom,
+    rgba(245, 245, 245, 0.1) 0%,
+    rgba(169, 169, 169, 0.05) 60%,
+    transparent 100%
+  );
+  border-radius: 20px 20px 100px 100px;
+  z-index: 0;
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 85%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 20px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(169, 169, 169, 0.2);
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(169, 169, 169, 0.3);
+}
+
+.content {
+  flex: 2;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Assistant";
+  color: #f5f5f5;
+  font-weight: 800;
+  text-shadow: 0 0 3px rgba(169, 169, 169, 0.5);
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-family: "Assistant";
+  color: #e0e0e0;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.subtitle:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(169, 169, 169, 0.3) 100%
+  );
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  direction: rtl;
+  font-family: "AssistantR";
+  color: #f0f0f0;
+  position: relative;
+  padding: 1.2rem;
+  background: linear-gradient(165deg, 
+    rgba(40, 40, 45, 0.6) 0%,
+    rgba(25, 25, 30, 0.7) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(169, 169, 169, 0.15);
+  box-shadow: 
+    inset 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* הוספת box-sizing */
+}
+
+/* Add spacing between paragraphs in description */
+.description p {
+  margin-bottom: 1rem;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.description:hover {
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  box-shadow: 
+    inset 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Subtle top highlight */
+.description:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom,
+    rgba(245, 245, 245, 0.07) 0%,
+    rgba(169, 169, 169, 0.03) 60%,
+    transparent 100%
+  );
+  border-radius: 12px 12px 50px 50px;
+  pointer-events: none;
+}
+
+/* Second container with original styling */
+.originalContainer {
+  width: 100%;
+  max-width: 1200px; /* Increased from 1000px to make container wider */
+  margin: 0 auto;
+  padding: 1rem 0;
+  box-sizing: border-box; /* הוספת box-sizing */
+}
+
+.centeredSection {
+  max-width: 1200px; /* Increased from 1000px to make container wider */
+  margin: 40px auto;
+  text-align: center;
+  box-sizing: border-box; /* הוספת box-sizing */
+}
+
+.description.centered {
+  font-size: 1.3rem;
+  width: 90%;
+  margin: 2% auto;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.description.centered:hover {
+  transform: none;
+  box-shadow: none;
+  border: none;
+}
+
+.description.centered:before {
+  display: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px; /* Increased from 1000px to make container wider */
+  box-sizing: border-box; /* הוספת box-sizing */
+}
+
+.achievementImage {
+  flex: 1;
+  position: relative;
+  width: 30%; /* צמצמתי ל-30% כדי שיהיו יותר תמונות בשורה */
+  min-width: 280px; /* מינימום רוחב כדי שהתמונות לא יהיו קטנות מדי */
+  max-width: 450px; /* הגדלתי את הרוחב המקסימלי */
+  margin: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.achievementImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Media Queries */
+
+/* מתחת ל-350px */
+@media only screen and (max-width: 349px) {
+  .header {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header:after {
+    left: 25%;
+    right: 25%;
+  }
+  
+  .metallicContainer {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    margin: 5% auto;
+    width: 90%;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    max-height: 300px;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  
+  .description.centered {
+    font-size: 1rem;
+    width: 95%;
+  }
+  
+  .achievementImage {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .originalContainer {
+    width: 90%;
+  }
+  
+  .centeredSection {
+    width: 90%;
+  }
+  
+  .row {
+    width: 90%;
+  }
+}
+
+/* 350px-450px */
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+  .header {
+    font-size: 2rem;
+    width: 90%;
+    margin: 2% auto;
+  }
+  
+  .metallicContainer {
+    flex-direction: column;
+    padding: 1.2rem;
+    gap: 1.8rem;
+    width: 92%;
+  }
+  
+  .imageContainer {
+    width: 80%;
+  }
+  
+  .image {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .title, .subtitle, .description {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+  
+  .description.centered {
+    font-size: 1.1rem;
+    width: 95%;
+  }
+  
+  .achievementImage {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .originalContainer {
+    width: 92%;
+  }
+  
+  .centeredSection {
+    width: 92%;
+  }
+  
+  .row {
+    width: 92%;
+  }
+}
+
+/* 450px-550px */
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+  .header {
+    font-size: 2.2rem;
+  }
+  
+  .metallicContainer {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+    width: 94%;
+  }
+  
+  .imageContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .description.centered {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  
+  .achievementImage {
+    width: 90%;
+    margin: 15px auto;
+  }
+  
+  .originalContainer {
+    width: 94%;
+  }
+  
+  .centeredSection {
+    width: 94%;
+  }
+  
+  .row {
+    width: 94%;
+  }
+}
+
+/* 550px-650px */
+@media only screen and (min-width: 551px) and (max-width: 650px) {
+  .header {
+    font-size: 2.3rem;
+  }
+  
+  .metallicContainer {
+    flex-direction: column;
+    padding: 1.6rem;
+    width: 96%;
+  }
+  
+  .imageContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .description {
+    text-align: center;
+  }
+  
+  .description.centered {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  
+  .achievementImage {
+    width: 85%;
+    margin: 15px auto;
+  }
+  
+  .originalContainer {
+    width: 96%;
+  }
+  
+  .centeredSection {
+    width: 96%;
+  }
+  
+  .row {
+    width: 96%;
+  }
+}
+
+/* 650px-750px */
+@media only screen and (min-width: 651px) and (max-width: 750px) {
+  .header {
+    font-size: 2.4rem;
+  }
+  
+  .metallicContainer {
+    flex-direction: column;
+    padding: 1.7rem;
+    margin: 4% auto;
+    width: 98%;
+  }
+  
+  .imageContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.32rem;
+  }
+  
+  .description.centered {
+    width: 85%;
+  }
+  
+  .achievementImage {
+    width: 80%;
+  }
+  
+  .originalContainer {
+    width: 98%;
+  }
+  
+  .centeredSection {
+    width: 98%;
+  }
+  
+  .row {
+    width: 98%;
+  }
+}
+
+/* 750px-850px */
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+  .header {
+    font-size: 2.5rem;
+  }
+  
+  .metallicContainer {
+    gap: 2rem;
+    padding: 1.8rem;
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title {
+    font-size: 2.3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.35rem;
+  }
+  
+  .description {
+    font-size: 1.05rem;
+  }
+  
+  .description.centered {
+    width: 85%;
+  }
+  
+  .achievementImage {
+    width: 70%;
+  }
+  
+  .originalContainer {
+    width: 100%;
+  }
+  
+  .centeredSection {
+    width: 100%;
+  }
+  
+  .row {
+    width: 100%;
+  }
+}
+
+/* 850px-950px */
+@media only screen and (min-width: 851px) and (max-width: 950px) {
+  .header {
+    font-size: 2.6rem;
+  }
+  
+  .metallicContainer {
+    gap: 2.5rem;
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+  
+  .description.centered {
+    width: 80%;
+  }
+  
+  .achievementImage {
+    width: 60%;
+  }
+  
+  .originalContainer {
+    width: 100%;
+  }
+  
+  .centeredSection {
+    width: 100%;
+  }
+  
+  .row {
+    width: 100%;
+  }
+}
+
+/* 950px-1050px */
+@media only screen and (min-width: 951px) and (max-width: 1050px) {
+  .header {
+    font-size: 2.8rem;
+  }
+  
+  .metallicContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 55%;
+  }
+  
+  .originalContainer {
+    width: 100%;
+  }
+  
+  .centeredSection {
+    width: 100%;
+  }
+  
+  .row {
+    width: 100%;
+  }
+}
+
+/* 1050px-1150px */
+@media only screen and (min-width: 1051px) and (max-width: 1150px) {
+  .header {
+    font-size: 2.9rem;
+  }
+  
+  .metallicContainer {
+    max-width: 1100px;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 50%;
+  }
+  
+  .originalContainer {
+    max-width: 1100px;
+  }
+  
+  .centeredSection {
+    max-width: 1100px;
+  }
+  
+  .row {
+    max-width: 1100px;
+  }
+}
+
+/* 1150px-1250px */
+@media only screen and (min-width: 1151px) and (max-width: 1250px) {
+  .metallicContainer {
+    max-width: 1200px;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 45%;
+  }
+  
+  .originalContainer {
+    max-width: 1200px;
+  }
+  
+  .centeredSection {
+    max-width: 1200px;
+  }
+  
+  .row {
+    max-width: 1200px;
+  }
+}
