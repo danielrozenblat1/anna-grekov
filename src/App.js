@@ -10,7 +10,7 @@ function App() {
     <Routes>
    
     <Route path="/" index element={<CoursePageWrapper/>}/>
-    <Route path="/השתלמות" index element={<HishtalmutPageWrapper/>}/>
+    <Route path="/hishtalmut" index element={<HishtalmutPageWrapper/>}/>
  </Routes>
  </Router>
   </>
