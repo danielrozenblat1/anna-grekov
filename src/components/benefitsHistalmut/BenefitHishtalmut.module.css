@@ -132,7 +132,7 @@
 @media (max-width: 349px) {
   .container {
       gap: 0.8rem;
-      padding: 0 0.5rem;
+
   }
   
   .card {
@@ -160,7 +160,7 @@
 @media (min-width: 350px) and (max-width: 450px) {
   .container {
       gap: 1rem;
-      padding: 0 0.8rem;
+     
   }
   
   .card {

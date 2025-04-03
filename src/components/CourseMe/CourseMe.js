@@ -4,6 +4,7 @@ import HishtalmutButton from '../HishtalmutButton/HishtalmutButton';
 import annaImage from "../../images/אנה גרקוב תמונת תדמית.png";
 import achievement1 from "../../images/אנה הישגים לבן.png";
 import achievement2 from "../../images/אנה הישגים 2 לבן.png";
+import achievement3 from "../../images/אנה גרקוב שופטת.png";
 import AnnaWorks from '../recommends/AnnaWorks';
 import StudentsHishtalmut from '../recommends/StudentsHishtalmut';
 
@@ -55,7 +56,12 @@ const AboutMe = () => {
               <img src={achievement2} alt="מקום שלישי בתחרות הבינלאומית לאיפור קבוע" className={styles.image} />
             </div>
           </div>
-
+          <div className={styles.row}>
+            <div className={styles.achievementImage}>
+              <img src={achievement3} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
+            </div>
+       
+          </div>
           <p className={`${styles.description} ${styles.centered}`}>
             השאיפה למקצועיות ודיוק מושלם בכל טיפול היא שהובילה אותי להישגים אלה
           </p>
