@@ -1,0 +1,598 @@
+.container {
+  width: 100%;
+
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  position: relative;
+}
+
+/* Background image with opacity */
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../images/אנה\ השתלמות\ רקע\ ראשי.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.intro {
+  position: relative;
+  width: fit-content;
+  font-family: 'AssistantR';
+  max-width: 90%;
+  padding: 30px;
+  font-weight: 300;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.mainTextContainer {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: 'AssistantR';
+  font-weight: lighter;
+  z-index: 1;
+}
+
+.mainTextContainer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, 
+    #A2A2A2 0%, 
+    #E8E8E8 20%, 
+    #B4B4B4 40%, 
+    #C0C0C0 60%,
+    #E5E5E5 80%, 
+    #A2A2A2 100%);
+  z-index: -1;
+  border-radius: 8px;
+  filter: blur(0.5px);
+  opacity: 0.7;
+  background-size: 200% 200%;
+  animation: shimmer 3s linear infinite;
+}
+
+.mainTextInner {
+  background-color: black;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3), 
+              inset 0 0 20px rgba(200, 200, 200, 0.1);
+}
+
+.mainText {
+  color: white;
+  font-size: 20px;
+  font-family: 'AssistantR';
+  font-weight: lighter;
+  margin: 0;
+  text-align: center;
+}
+
+/* Modified styles for title container */
+.titleContainer {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+}
+
+.levelUpContainer {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.levelUpText {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #A9A9A9, #F5F5F5, #A9A9A9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+  background-size: 200% auto;
+  font-weight: 300;
+}
+
+/* Special style for the English LEVEL UP */
+.levelUpText.english {
+  font-family: 'Cinzel', serif;
+}
+
+/* Removed the shadow/glow effect */
+.levelUpGlow {
+  display: none;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.imageContainer img {
+  width: 30vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  font-family: 'AssistantR', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(160, 160, 160, 0.4);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(162, 162, 162, 0.1) 0%, 
+    rgba(232, 232, 232, 0.1) 20%, 
+    rgba(180, 180, 180, 0.1) 40%, 
+    rgba(192, 192, 192, 0.1) 60%,
+    rgba(229, 229, 229, 0.1) 80%, 
+    rgba(162, 162, 162, 0.1) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  border-color: rgba(200, 200, 200, 0.8);
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Below 350px */
+@media screen and (max-width: 349px) {
+  .container {
+    min-height: 90vh;
+    height: 90vh;
+  }
+  
+  .intro {
+    padding: 15px;
+    height: 90vh;
+    justify-content: space-between;
+    padding-top: 15px; /* פחות padding למעלה במסכים קטנים */
+    box-sizing: border-box;
+  }
+  
+  .mainText {
+    font-size: 15px;
+  }
+  
+  .mainTextInner {
+    padding: 14px;
+  }
+  
+  .mainTextContainer {
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .levelUpText {
+    font-size: 1.5rem;
+  }
+  
+  .titleContainer {
+    gap: 6px;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  
+  .imageContainer {
+    margin-bottom: 10px; /* פחות margin במסכים קטנים */
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 85vw;
+  }
+  
+  .buttonContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0;
+  }
+  
+  .button {
+    font-size: 13px;
+    padding: 10px 8px;
+    flex: 1 0 40%;
+  }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .container {
+    min-height: 90vh;
+    height: 90vh;
+  }
+  
+  .intro {
+    padding: 18px;
+    height: 90vh;
+    justify-content: space-between;
+    padding-top: 15px; /* פחות padding למעלה במסכים קטנים */
+    box-sizing: border-box;
+  }
+  
+  .mainText {
+    font-size: 16px;
+  }
+  
+  .mainTextInner {
+    padding: 16px;
+  }
+  
+  .mainTextContainer {
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .levelUpText {
+    font-size: 1.7rem;
+  }
+  
+  .titleContainer {
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  .imageContainer {
+    margin-bottom: 10px; /* פחות margin במסכים קטנים */
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 90vw;
+  }
+  
+  .buttonContainer {
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 0;
+  }
+  
+  .button {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  .container {
+    min-height: 90vh;
+    height: 90vh;
+  }
+  
+  .intro {
+    padding: 20px;
+    min-height: 90vh;
+    height: 90vh;
+    justify-content: space-between;
+    padding-top: 15px; /* פחות padding למעלה במסכים קטנים */
+    box-sizing: border-box;
+  }
+  
+  .mainText {
+    font-size: 17px;
+  }
+  
+  .mainTextContainer {
+    margin-bottom: 10px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mainTextInner {
+    padding: 18px;
+  }
+  
+  .levelUpText {
+    font-size: 1.9rem;
+  }
+  
+  .titleContainer {
+    margin: 12px 0;
+  }
+  
+  .imageContainer {
+    margin-bottom: 15px;
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 75vw;
+  }
+  
+  .buttonContainer {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+  .container {
+    min-height: 90vh;
+    height: 90vh;
+  }
+  
+  .intro {
+    padding: 22px;
+    min-height: 90vh;
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .mainText {
+    font-size: 17px;
+  }
+  
+  .levelUpText {
+    font-size: 2rem;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 65vw;
+  }
+  
+  .buttonContainer {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+}
+
+/* 650px - 750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    padding: 24px;
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .mainText {
+    font-size: 18px;
+  }
+  
+  .levelUpText {
+    font-size: 2.2rem;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 50vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}
+
+/* 750px - 850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .levelUpText {
+    font-size: 2.3rem;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 45vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}
+
+/* 850px - 950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .levelUpText {
+    font-size: 2.4rem;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 40vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}
+
+/* 950px - 1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 35vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}
+
+/* 1050px - 1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 33vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}
+
+/* 1150px - 1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+  .container {
+    height: 90vh;
+  }
+  
+  .intro {
+    height: 90vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .imageContainer {
+    flex-shrink: 1;
+  }
+  
+  .imageContainer img {
+    width: 32vw;
+  }
+  
+  .buttonContainer {
+    margin-bottom: 0;
+  }
+}

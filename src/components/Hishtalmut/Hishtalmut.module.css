@@ -1,0 +1,565 @@
+/* CollapsibleTOC.module.css */
+
+.tocContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: 'Assistant', sans-serif;
+  direction: rtl;
+  position: relative;
+  border: none; /* Removed border as requested */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(135deg, rgba(192, 192, 192, 0.1) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(192, 192, 192, 0.1) 100%);
+  padding: 2px;
+}
+
+.tocHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.tocContainer.open .tocHeader {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tocHeader::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #c0c0c0, #e0e0e0, #silver, #e0e0e0, #c0c0c0);
+  z-index: -1;
+  border-radius: 10px;
+  animation: animatedgradient 6s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.tocHeaderContent {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.tocTitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.tocSubtitle {
+  font-size: 1rem;
+  color: #bebebe;
+  margin: 0;
+  font-weight: 300;
+  font-family: 'AssistantR', sans-serif;
+  text-align: right;
+}
+
+.toggleIcon {
+  color: rgba(192, 192, 192, 0.7);
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(45deg, #9c9c9c, #c0c0c0, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+.tocContainer.open .toggleIcon svg {
+  transform: rotate(180deg);
+}
+
+.tocHeader:hover .toggleIcon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+}
+
+.tocContent {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.6s ease, margin 0.4s ease;
+  background: #000000;
+  position: relative;
+  border-radius: 4px;
+  padding: 0 2px;
+  border: 1px solid rgba(192, 192, 192, 0.15);
+  margin-top: 0;
+}
+
+.tocContent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  border-radius: 3px;
+  z-index: -1;
+  margin: 1px;
+}
+
+.tocContainer.open .tocContent {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 1rem;
+  padding: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Importing the styles from the paste.txt */
+.container {
+  background: #000000;
+  border-radius: 0;
+  padding: 4rem;
+  margin: 0 auto;
+  direction: rtl;
+  text-align: right;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(192, 192, 192, 0.1);
+  border-left: 2px solid rgba(192, 192, 192, 0.3);
+  border-right: 2px solid rgba(192, 192, 192, 0.3);
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(192, 192, 192, 0.4), transparent);
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: right;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  width: 40px;
+  height: 1px;
+  background: rgba(192, 192, 192, 0.3);
+  transform: none;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-family: 'Assistant', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* Grid layout for chapters */
+.chaptersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.chapterItem {
+  position: relative;
+  padding: 1.25rem 1rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: none;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: inset 0 0 15px rgba(192, 192, 192, 0.05);
+  height: auto; /* Auto height for chapter items */
+  display: flex; /* Added to ensure content fills height */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.chapterItem:hover {
+  background: rgba(255, 255, 255, 0.02);
+  transform: translateY(-5px);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+  box-shadow: inset 0 0 20px rgba(192, 192, 192, 0.1);
+}
+
+.chapterItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to bottom, transparent, rgba(192, 192, 192, 0.3), transparent);
+  transition: height 0.4s ease;
+}
+
+.chapterItem:hover::before {
+  height: 100%;
+}
+
+.chapterContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 100%; /* Make content fill the full height */
+}
+
+.chapterIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 0;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.chapterIcon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: rgba(192, 192, 192, 0.7);
+  background: linear-gradient(45deg, #9c9c9c, #c0c0c0, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1;
+  transition: all 0.3s ease;
+}
+
+.chapterItem:hover .chapterIcon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+}
+
+.chapterTitle {
+  font-size: 0.95rem;
+  color: #bebebe;
+  font-weight: 300;
+  font-family: 'AssistantR', sans-serif;
+  margin: 0;
+  text-align: right;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.chapterItem:hover .chapterTitle {
+  color: #ffffff;
+}
+
+/* Responsive Styles */
+
+/* Below 350px */
+@media screen and (max-width: 349px) {
+  .tocContainer {
+    width: 85%;
+    margin: 1rem auto;
+    padding: 1px;
+  }
+  
+  .tocHeader {
+    padding: 1rem;
+  }
+  
+  .tocTitle {
+    font-size: 1.1rem;
+  }
+  
+  .tocSubtitle {
+    font-size: 0.8rem;
+  }
+  
+  .toggleIcon svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .chapterItem {
+    padding: 1rem 0.75rem;
+  }
+  
+  .chapterTitle {
+    font-size: 0.85rem;
+  }
+  
+  .chapterIcon svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .tocContainer {
+    width: 90%;
+    margin: 1.2rem auto;
+  }
+  
+  .tocHeader {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .tocTitle {
+    font-size: 1.2rem;
+  }
+  
+  .tocSubtitle {
+    font-size: 0.85rem;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .header {
+    margin-bottom: 3.5rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .chapterTitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  .tocContainer {
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+  
+  .tocHeader {
+    padding: 1.3rem 1.8rem;
+  }
+  
+  .tocTitle {
+    font-size: 1.3rem;
+  }
+  
+  .container {
+    padding: 2.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+  .tocContainer {
+    width: 78%;
+  }
+  
+  .tocHeader {
+    padding: 1.4rem 1.8rem;
+  }
+  
+  .container {
+    padding: 3rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+/* 650px - 750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+  .tocContainer {
+    width: 75%;
+  }
+  
+  .container {
+    padding: 3.2rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .chapterItem {
+    padding: 1.2rem 0.9rem;
+  }
+}
+
+/* 750px - 850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+  .tocContainer {
+    width: 72%;
+  }
+  
+  .container {
+    padding: 3.5rem;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+/* 850px - 950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+  .tocContainer {
+    width: 70%;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+/* 950px - 1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+  .tocContainer {
+    width: 68%;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* 1050px - 1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+  .tocContainer {
+    width: 65%;
+    max-width: 1000px;
+  }
+  
+  .wrapper {
+    max-width: 1000px;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 1150px - 1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+  .tocContainer {
+    width: 60%;
+    max-width: 1100px;
+  }
+  
+  .wrapper {
+    max-width: 1100px;
+  }
+  
+  .chaptersGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 1250px and above */

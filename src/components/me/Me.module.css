@@ -1,0 +1,352 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.header {
+  font-size: 3rem;
+  font-family: "Assistant";
+  text-align: center;
+  margin: 0 auto 2%;
+  direction: rtl;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+}
+
+.achievementImage {
+  width: 45%;
+  max-width: 400px;
+  margin: 10px;
+}
+
+.image {
+  width: 80%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 20px;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.04) rotate(1.5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.content {
+  flex: 2;
+  text-align: right;
+  direction: rtl;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Assistant";
+  text-align: right;
+  direction: rtl;
+  width: 90%;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-family: "Assistant";
+  text-align: right;
+  margin: 1% auto;
+  direction: rtl;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  direction: rtl;
+  font-family: "AssistantR";
+  margin-bottom: 15px;
+}
+
+.centeredSection {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.description.centered {
+  font-size: 1.3rem;
+  width: 90%;
+  margin: 2% auto;
+}
+
+.button {
+  background-color: #000;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-family: "Assistant";
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Below 350px */
+@media only screen and (max-width: 349px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .header {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .imageContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    max-height: 300px;
+  }
+  
+  .achievementImage {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .description.centered {
+    font-size: 1rem;
+  }
+}
+
+/* 350px - 450px */
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    width: 92%;
+  }
+  
+  .header {
+    font-size: 2rem;
+    width:90%;
+    margin:2% auto;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 100%;
+  }
+  
+  .title, .subtitle, .description {
+    text-align: center;
+    width: 100%;
+  }
+
+  .description.centered {
+    font-size: 1.1rem;
+  }
+}
+
+/* 450px - 550px */
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+  .container {
+    flex-direction: column;
+    width: 94%;
+  }
+  
+  .header {
+    font-size: 2.2rem;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 90%;
+  }
+
+  .description.centered {
+    font-size: 1.2rem;
+  }
+}
+
+/* 550px - 650px */
+@media only screen and (min-width: 551px) and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    width: 96%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 85%;
+  }
+  
+  .title, .subtitle, .description {
+    text-align: center;
+  }
+}
+
+/* 650px - 750px */
+@media only screen and (min-width: 651px) and (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    width: 98%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 80%;
+  }
+}
+
+/* 750px - 850px */
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 70%;
+  }
+}
+
+/* 850px - 950px */
+@media only screen and (min-width: 851px) and (max-width: 950px) {
+  .container {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 60%;
+  }
+}
+
+/* 950px - 1050px */
+@media only screen and (min-width: 951px) and (max-width: 1050px) {
+  .container {
+    width: 100%;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 55%;
+  }
+}
+
+/* 1050px - 1150px */
+@media only screen and (min-width: 1051px) and (max-width: 1150px) {
+  .container {
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 50%;
+  }
+}
+
+/* 1150px - 1250px */
+@media only screen and (min-width: 1151px) and (max-width: 1250px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .achievementImage {
+    width: 45%;
+  }
+}

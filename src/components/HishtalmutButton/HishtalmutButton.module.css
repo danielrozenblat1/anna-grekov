@@ -1,0 +1,52 @@
+.center {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 2% auto;
+  }
+  
+  .button {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 6px;
+    direction: rtl;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-family: 'AssistantR', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(200, 200, 200, 0.6); /* Increased border opacity in normal state */
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(162, 162, 162, 0.2) 0%, 
+      rgba(232, 232, 232, 0.2) 20%, 
+      rgba(180, 180, 180, 0.2) 40%, 
+      rgba(192, 192, 192, 0.2) 60%, 
+      rgba(229, 229, 229, 0.2) 80%, 
+      rgba(162, 162, 162, 0.2) 100%);
+    z-index: -1;
+    opacity: 0.4; /* Starting with some opacity instead of 0 */
+    transition: opacity 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.03);
+    border-color: rgba(200, 200, 200, 0.8);
+  }
+  
+  .button:hover::before {
+    opacity: 1;
+  }

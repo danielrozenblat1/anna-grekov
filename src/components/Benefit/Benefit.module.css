@@ -1,0 +1,140 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding:1rem;
+    direction: rtl;
+
+}
+  
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.benefitsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+  
+.benefitItem {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1% auto;
+    direction: rtl;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.1rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(222, 184, 135, 0.15);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    transition: all 0.7s ease;
+}
+  
+.benefitItem:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.08),
+        inset 0 0 25px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(222, 184, 135, 0.25);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+}
+  
+.benefitText {
+    color: #34495e;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    margin: 0;
+    text-align: right;
+    direction: rtl;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+  
+.checkIcon {
+    min-width: 24px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 
+        0 0 10px rgba(222, 184, 135, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(222, 184, 135, 0.2);
+    transition: all 0.5s ease;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    color: #34495e;
+}
+
+.checkIcon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        transparent 100%
+    );
+    animation: shine 3s infinite ease-in-out;
+}
+  
+.benefitItem:hover .checkIcon {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 
+        0 0 15px rgba(222, 184, 135, 0.25),
+        inset 0 0 20px rgba(255, 255, 255, 1);
+    transform: scale(1.05) rotate(360deg);
+    color: #2c3e50;
+}
+  
+@media (max-width: 768px) {
+    .benefitsList {
+        gap: 1rem;
+    }
+    
+    .benefitItem {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+  
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
