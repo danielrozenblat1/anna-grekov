@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './CourseMe.module.css';
 import HishtalmutButton from '../HishtalmutButton/HishtalmutButton';
-import annaImage from "../../images/אנה גרקוב תמונת תדמית.png";
-import achievement1 from "../../images/אנה הישגים לבן.png";
-import achievement2 from "../../images/אנה הישגים 2 לבן.png";
-import achievement3 from "../../images/אנה גרקוב שופטת.png";
+import annaImage from "../../images/אנה גרקוב תמונת תדמית.webp";
+import achievement1 from "../../images/אנה הישגים לבן.webp";
+import achievement2 from "../../images/אנה הישגים 2 לבן.webp";
+import achievement3 from "../../images/אנה גרקוב שופטת.webp";
 import AnnaWorks from '../recommends/AnnaWorks';
 import StudentsHishtalmut from '../recommends/StudentsHishtalmut';
 
@@ -16,7 +16,7 @@ const AboutMe = () => {
       {/* First container with metallic styling */}
       <div className={styles.metallicContainer}>
         <div className={styles.imageContainer}>
-          <img src={annaImage} alt="אנה גרקוב" className={styles.image} />
+          <img loading="lazy" src={annaImage} alt="אנה גרקוב" className={styles.image} />
         </div>
         <div className={styles.content}>
           <h1 className={styles.title}>אנה גרקוב</h1>
@@ -50,15 +50,15 @@ const AboutMe = () => {
           
           <div className={styles.row}>
             <div className={styles.achievementImage}>
-              <img src={achievement1} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
+              <img loading="lazy" src={achievement1} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
             </div>
             <div className={styles.achievementImage}>
-              <img src={achievement2} alt="מקום שלישי בתחרות הבינלאומית לאיפור קבוע" className={styles.image} />
+              <img loading="lazy" src={achievement2} alt="מקום שלישי בתחרות הבינלאומית לאיפור קבוע" className={styles.image} />
             </div>
           </div>
           <div className={styles.row}>
             <div className={styles.achievementImage}>
-              <img src={achievement3} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
+              <img loading="lazy" src={achievement3} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
             </div>
        
           </div>

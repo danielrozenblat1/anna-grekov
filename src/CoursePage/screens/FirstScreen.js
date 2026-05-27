@@ -4,9 +4,9 @@ import lips from "../../Icons/wired-lineal-1597-lips-hover-pinch.json";
 import styles from './FirstScreen.module.css';
 import PinkScrollButton from '../../components/button/Button';
 import learn from "../../Icons/wired-lineal-406-study-graduation-hover-pinch (1).json"
-import middleImage from "../../images/אנה גרקוב תמונה ראשית.png";
-import rightImage from "../../images/אנה גרקוב תמונה ימנית.png"
-import leftImage from "../../images/אנה גרקוב תמונה שמאלית.png"
+import middleImage from "../../images/אנה גרקוב תמונה ראשית.webp";
+import rightImage from "../../images/אנה גרקוב תמונה ימנית.webp"
+import leftImage from "../../images/אנה גרקוב תמונה שמאלית.webp"
 import GradientLoader from '../../components/loader/Loader';
 const FirstScreen = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);

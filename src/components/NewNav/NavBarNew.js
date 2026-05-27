@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
-import logo from "../../images/אנה גרקוב לוגו.png"
+import logo from "../../images/אנה גרקוב לוגו.webp"
 
 import { FaInstagram, FaWhatsapp, FaTimes } from 'react-icons/fa';
 
@@ -21,8 +21,8 @@ const NavBarNew = () => {
   }, []);
 
   const handleClick = () => {
-    const phoneNumber = "+972528412646";
-    const message = "היי מאי ,אני רוצה לשמוע ממך עוד על..";
+    const phoneNumber = "+972508668138";
+    const message = "היי אנה, הגעתי מהאתר ואשמח לשמוע עוד על..";
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");

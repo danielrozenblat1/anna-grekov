@@ -2,22 +2,22 @@ import React from 'react';
 import styles from './Students.module.css';
 
 // Import your images
-import result1 from "../../images/אנה גרקוב תלמידות עם תעודות 1.png";
-import result2 from "../../images/אנה גרקוב תלמידות עם תעודות 2.png";
-import result3 from "../../images/אנה גרקוב תלמידות עם תעודות 3.png";
-import result4 from "../../images/אנה גרקוב תלמידות עם תעודות 4.png";
-import result5 from "../../images/אנה גרקוב תלמידות עם תעודות 5.png";
-import result6 from "../../images/אנה גרקוב תלמידות עם תעודות 6.png";
-import result7 from "../../images/אנה גרקוב תלמידות עם תעודות 7.png";
-import result8 from "../../images/אנה גרקוב תלמידות עם תעודות 8.png";
-import result9 from "../../images/אנה גרקוב תלמידות עם תעודות 9.png";
-import result10 from "../../images/אנה גרקוב תלמידות עם תעודות 10.png";
-import result11 from "../../images/אנה גרקוב תלמידות עם תעודות 11.png";
-import result12 from "../../images/אנה גרקוב תלמידות עם תעודות 12.png";
-import result13 from "../../images/אנה גרקוב תלמידות עם תעודות 13.png";
-import result14 from "../../images/אנה גרקוב תלמידות עם תעודות 14.png";
-import result15 from "../../images/אנה גרקוב תלמידות עם תעודות 14.png";
-import result16 from "../../images/אנה גרקוב תלמידות עם תעודות 14.png";
+import result1 from "../../images/אנה גרקוב תלמידות עם תעודות 1.webp";
+import result2 from "../../images/אנה גרקוב תלמידות עם תעודות 2.webp";
+import result3 from "../../images/אנה גרקוב תלמידות עם תעודות 3.webp";
+import result4 from "../../images/אנה גרקוב תלמידות עם תעודות 4.webp";
+import result5 from "../../images/אנה גרקוב תלמידות עם תעודות 5.webp";
+import result6 from "../../images/אנה גרקוב תלמידות עם תעודות 6.webp";
+import result7 from "../../images/אנה גרקוב תלמידות עם תעודות 7.webp";
+import result8 from "../../images/אנה גרקוב תלמידות עם תעודות 8.webp";
+import result9 from "../../images/אנה גרקוב תלמידות עם תעודות 9.webp";
+import result10 from "../../images/אנה גרקוב תלמידות עם תעודות 10.webp";
+import result11 from "../../images/אנה גרקוב תלמידות עם תעודות 11.webp";
+import result12 from "../../images/אנה גרקוב תלמידות עם תעודות 12.webp";
+import result13 from "../../images/אנה גרקוב תלמידות עם תעודות 13.webp";
+import result14 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
+import result15 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
+import result16 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
 import Button from '../WAbutton/Button';
 import InfiniteCarousel from './Carousel';
 
@@ -42,6 +42,7 @@ const Students = (props) => {
             {images.map((img, index) => (
               <div key={`first-${index}`} className={styles.imageWrapper}>
                 <img
+                  loading="lazy"
                   src={img}
                   className={styles.image}
                   alt={`לקוחה ממליצה מספר ${index + 1}`}
@@ -55,6 +56,7 @@ const Students = (props) => {
             {images.map((img, index) => (
               <div key={`second-${index}`} className={styles.imageWrapper}>
                 <img
+                  loading="lazy"
                   src={img}
                   className={styles.image}
                   alt={`לקוחה ממליצה מספר ${index + 1}`}

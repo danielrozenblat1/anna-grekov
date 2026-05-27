@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Me.module.css';
 import Button from '../WAbutton/Button';
-import annaImage from "../../images/אנה גרקוב תמונת תדמית.png";
-import achievement1 from "../../images/אנה הישגים.png"; // Update with your actual image path
-import achievement2 from "../../images/אנה הישגים 2.png"; // Update with your actual image path
+import annaImage from "../../images/אנה גרקוב תמונת תדמית.webp";
+import achievement1 from "../../images/אנה הישגים.webp"; // Update with your actual image path
+import achievement2 from "../../images/אנה הישגים 2.webp"; // Update with your actual image path
 import Recommends from '../recommends/Recommends';
 
 const AboutMe = () => {
@@ -14,7 +14,7 @@ const AboutMe = () => {
       <div className={styles.header} id="מי אני">אז לפני שנצלול למים.. בואי נכיר</div>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
-          <img src={annaImage} alt="אנה גרקוב" className={styles.image} />
+          <img loading="lazy" src={annaImage} alt="אנה גרקוב" className={styles.image} />
         </div>
         <div className={styles.content}>
           <h1 className={styles.title}>אנה גרקוב</h1>
@@ -43,10 +43,10 @@ const AboutMe = () => {
         
         <div className={styles.row}>
           <div className={styles.achievementImage}>
-            <img src={achievement1} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
+            <img loading="lazy" src={achievement1} alt="מקום שני בתחרות הארצית לאיפור קבוע" className={styles.image} />
           </div>
           <div className={styles.achievementImage}>
-            <img src={achievement2} alt="מקום שלישי בתחרות הבינלאומית לאיפור קבוע" className={styles.image} />
+            <img loading="lazy" src={achievement2} alt="מקום שלישי בתחרות הבינלאומית לאיפור קבוע" className={styles.image} />
           </div>
         </div>
 

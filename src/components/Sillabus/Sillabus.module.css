@@ -98,7 +98,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../../images//אנה\ גרקוב\ תמונה\ שמאלית.png');  /* כאן תחליפי את הURL בתמונה שלך */
+    background-image: url('../../images//אנה\ גרקוב\ תמונה\ שמאלית.webp');  /* כאן תחליפי את הURL בתמונה שלך */
     background-size: cover;
     background-position: top;
     opacity: 0.3;
@@ -107,19 +107,19 @@
 }
 
 .day01::before {
-    background-image: url("../../images/אנה\ גרקוב\ תמונה\ ראשית.png");
+    background-image: url("../../images/אנה\ גרקוב\ תמונה\ ראשית.webp");
 }
 
 .day02::before {
-    background-image: url("../../images/אנה\ גרקוב\ תמונת\ תדמית.png");
+    background-image: url("../../images/אנה\ גרקוב\ תמונת\ תדמית.webp");
 }
 
 .day03::before {
-    background-image: url("../../images/אנה\ גרקוב\ עבודות\ שפתיים\ 4.png");
+    background-image: url("../../images/אנה\ גרקוב\ עבודות\ שפתיים\ 4.webp");
 }
 
 .day04::before {
-    background-image: url("../../images/אנה\ גרקוב\ עבודות\ שפתיים\ 3.png");
+    background-image: url("../../images/אנה\ גרקוב\ עבודות\ שפתיים\ 3.webp");
 }
 
 

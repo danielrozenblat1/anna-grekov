@@ -1,13 +1,13 @@
 import styles from "./AnnaWorks.module.css"
-import result1 from "../../images/אנה גרקוב עבודות שפתיים 1.png"
-import result2 from "../../images/אנה גרקוב עבודות שפתיים 2.png"
-import result3 from "../../images/אנה גרקוב עבודות שפתיים 3.png"
-import result4 from "../../images/אנה גרקוב עבודות שפתיים 4.png"
-import result5 from "../../images/אנה גרקוב עבודות שפתיים 5.png"
-import result6 from "../../images/אנה גרקוב עבודות שפתיים 6.png"
-import result7 from "../../images/אנה גרקוב עבודות שפתיים 7.png"
-import result8 from "../../images/אנה גרקוב עבודות שפתיים 8.png"
-import result9 from "../../images/אנה גרקוב עבודות שפתיים 9.png"
+import result1 from "../../images/אנה גרקוב עבודות שפתיים 1.webp"
+import result2 from "../../images/אנה גרקוב עבודות שפתיים 2.webp"
+import result3 from "../../images/אנה גרקוב עבודות שפתיים 3.webp"
+import result4 from "../../images/אנה גרקוב עבודות שפתיים 4.webp"
+import result5 from "../../images/אנה גרקוב עבודות שפתיים 5.webp"
+import result6 from "../../images/אנה גרקוב עבודות שפתיים 6.webp"
+import result7 from "../../images/אנה גרקוב עבודות שפתיים 7.webp"
+import result8 from "../../images/אנה גרקוב עבודות שפתיים 8.webp"
+import result9 from "../../images/אנה גרקוב עבודות שפתיים 9.webp"
 
 
 import Slider from 'react-slick';
@@ -80,7 +80,7 @@ return <>
           {content.map((item, index) => (
             <div key={index} itemscope itemtype="http://schema.org/Review">
               {item.type === 'image' && (
-                <img src={item.src} className={styles.image1} alt={`אנה גרקוב לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
+                <img loading="lazy" src={item.src} className={styles.image1} alt={`אנה גרקוב לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
               )}
               {item.type === 'video' && (
                 <video

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FirstScreen.module.css';
-import anna from "../../images/אנה גרקוב השתלמות תדמית.png";
+import anna from "../../images/אנה גרקוב השתלמות תדמית.webp";
 // You'll need to import your background image
 // For example: import backgroundImage from "../../images/background.jpg";
 

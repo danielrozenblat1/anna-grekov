@@ -1,15 +1,15 @@
 import styles from "./Recommends.module.css"
-import result1 from "../../images/אנה גרקוב המלצות 1.png"
-import result2 from "../../images/אנה גרקוב המלצות 2.png"
-import result3 from "../../images/אנה גרקוב המלצות 3.png"
-import result4 from "../../images/אנה גרקוב המלצות 4.png"
-import result5 from "../../images/אנה גרקוב המלצות 5.png"
-import result6 from "../../images/אנה גרקוב המלצות 6.png"
-import result7 from "../../images/אנה גרקוב המלצות 7.png"
-import result8 from "../../images/אנה גרקוב המלצות 8.png"
-import result9 from "../../images/אנה גרקוב המלצות 9.png"
-import result10 from "../../images/אנה גרקוב המלצות 10.png"
-import result11 from  "../../images/אנה גרקוב המלצות 11.png"
+import result1 from "../../images/אנה גרקוב המלצות 1.webp"
+import result2 from "../../images/אנה גרקוב המלצות 2.webp"
+import result3 from "../../images/אנה גרקוב המלצות 3.webp"
+import result4 from "../../images/אנה גרקוב המלצות 4.webp"
+import result5 from "../../images/אנה גרקוב המלצות 5.webp"
+import result6 from "../../images/אנה גרקוב המלצות 6.webp"
+import result7 from "../../images/אנה גרקוב המלצות 7.webp"
+import result8 from "../../images/אנה גרקוב המלצות 8.webp"
+import result9 from "../../images/אנה גרקוב המלצות 9.webp"
+import result10 from "../../images/אנה גרקוב המלצות 10.webp"
+import result11 from  "../../images/אנה גרקוב המלצות 11.webp"
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -86,7 +86,7 @@ return <>
           {content.map((item, index) => (
             <div key={index} itemscope itemtype="http://schema.org/Review">
               {item.type === 'image' && (
-                <img src={item.src} className={styles.image1} alt={`אנה גרקוב לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
+                <img loading="lazy" src={item.src} className={styles.image1} alt={`אנה גרקוב לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
               )}
               {item.type === 'video' && (
                 <video

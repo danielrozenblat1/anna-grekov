@@ -42,7 +42,7 @@
 }
   
 .centerImage {
-    background-image: url('../../images/אנה\ גרקוב\ תמונה\ ראשית.png');
+    background-image: url('../../images/אנה\ גרקוב\ תמונה\ ראשית.webp');
 }
   
 .contentBox {
@@ -148,11 +148,11 @@
 @media (min-width: 550px) {
     .leftImage {
         display: block;
-        background-image: url('../..//images/אנה\ גרקוב\ תמונה\ שמאלית.png');
+        background-image: url('../..//images/אנה\ גרקוב\ תמונה\ שמאלית.webp');
     }
     .rightImage {
         display: block;
-        background-image: url('../../images/אנה\ גרקוב\ תמונה\ ימנית.png');
+        background-image: url('../../images/אנה\ גרקוב\ תמונה\ ימנית.webp');
     }
     .contentBox {
         padding: 1.8rem;
