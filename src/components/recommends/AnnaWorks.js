@@ -13,14 +13,12 @@ import result9 from "../../images/אנה גרקוב עבודות שפתיים 9.
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Button from "../WAbutton/Button"
 const AnnaWorks=()=>{
     const sliderSettings = {
      
         infinite: true,
         speed: 700,
         autoplaySpeed: 2500,
-        infinite: true,
    
         dots:false,
         

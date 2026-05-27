@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ForthScreen.module.css';
 import Box from '../../components/box/Box';
-import lips from "../../Icons/wired-lineal-1597-lips-hover-pinch (1).json"
+
 import mirror from "../../Icons/wired-lineal-1589-makeup-mirror-hover-pinch.json"
 import pencil from "../../Icons/wired-lineal-35-edit-hover-line.json"
 import lipstick from "../../Icons/wired-lineal-1559-lipstick-hover-pinch.json"

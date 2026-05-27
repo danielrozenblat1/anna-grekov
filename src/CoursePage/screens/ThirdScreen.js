@@ -1,11 +1,10 @@
 import Bonus from "../../components/newBox/NewBox"
 import styles from "./ThirdScreen.module.css"
 import shake from "../../Icons/wired-outline-456-handshake-deal-hover-pinch (2).json"
-import knowledge from "../../Icons/wired-outline-406-study-graduation-hover-pinch (1).json"
+
 import community from "../../Icons/wired-outline-273-three-female-avatars-hover-nodding (1).json"
 import certificate from "../../Icons/wired-outline-1483-parchment-hover-pinch (1).json"
-import Syllabus from "../../components/Sillabus/Sillabus"
-import Button from "../../components/WAbutton/Button"
+
 import Works from "../../components/recommends/Works"
 const ThirdScreen = () => {
   return (

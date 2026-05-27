@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './SixthScreen.module.css';
-import StyledMessages from '../../components/trend/Trending';
-import { BenefitsContainer } from '../../components/benefitsHistalmut/BenefitHishtalmut';
+
 import taste from "../../videos/אנה הצצה לקורס.mp4"
 import ByMe from '../../components/ByMeH/ByMe';
 import HishtalmutButton from '../../components/HishtalmutButton/HishtalmutButton';

@@ -14,14 +14,12 @@ import result11 from  "../../images/אנה גרקוב עבודות של תלמי
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Button from "../WAbutton/Button"
 const Works=()=>{
     const sliderSettings = {
      
         infinite: true,
         speed: 700,
         autoplaySpeed: 2500,
-        infinite: true,
    
         dots:false,
         

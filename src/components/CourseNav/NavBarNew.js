@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from "react-scroll";
+
 import styles from './NavBarNew.module.css';
 import logo from "../../images/אנה גרקוב לוגו.webp"
 

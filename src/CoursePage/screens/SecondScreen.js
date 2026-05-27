@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, Clock } from 'lucide-react';
+
 import styles from './SecondScreen.module.css';
 import Students from '../../components/recommends/Students';
 import IconTextComponent from '../../components/can/Can';

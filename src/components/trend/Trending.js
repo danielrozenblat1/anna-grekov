@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Heart, Award, Star, Shield, Users } from 'lucide-react';
+import { Clock, Heart, Award, Shield } from 'lucide-react';
 import styles from './Trending.module.css';
 
 const TextWithIcon = ({ text, icon: Icon }) => {

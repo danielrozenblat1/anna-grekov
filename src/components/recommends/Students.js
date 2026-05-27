@@ -16,10 +16,7 @@ import result11 from "../../images/אנה גרקוב תלמידות עם תעו�
 import result12 from "../../images/אנה גרקוב תלמידות עם תעודות 12.webp";
 import result13 from "../../images/אנה גרקוב תלמידות עם תעודות 13.webp";
 import result14 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
-import result15 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
-import result16 from "../../images/אנה גרקוב תלמידות עם תעודות 14.webp";
-import Button from '../WAbutton/Button';
-import InfiniteCarousel from './Carousel';
+
 
 
 const Students = (props) => {

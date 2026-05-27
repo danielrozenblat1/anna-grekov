@@ -4,7 +4,7 @@ import Button from '../WAbutton/Button';
 import annaImage from "../../images/אנה גרקוב תמונת תדמית.webp";
 import achievement1 from "../../images/אנה הישגים.webp"; // Update with your actual image path
 import achievement2 from "../../images/אנה הישגים 2.webp"; // Update with your actual image path
-import Recommends from '../recommends/Recommends';
+
 
 const AboutMe = () => {
 

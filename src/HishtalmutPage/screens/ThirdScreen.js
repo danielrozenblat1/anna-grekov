@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ThirdScreen.module.css';
-import StyledMessages from '../../components/trend/Trending';
-import { BenefitsContainer } from '../../components/benefitsHistalmut/BenefitHishtalmut';
+
 import CollapsibleTableOfContents from '../../components/Hishtalmut/Hishtalmut';
 import HishtalmutButton from '../../components/HishtalmutButton/HishtalmutButton';
 import Bonus from '../../components/newBox/NewBox';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import styles from './CoursePageWrapper.module.css';
+
 import FirstScreen from './screens/FirstScreen';
 import SecondScreen from './screens/SecondScreen';
 import AboutMe from '../components/me/Me';

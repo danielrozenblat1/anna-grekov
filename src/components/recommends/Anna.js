@@ -20,7 +20,6 @@ const Anna=()=>{
         infinite: true,
         speed: 700,
         autoplaySpeed: 2500,
-        infinite: true,
    
         dots:false,
         

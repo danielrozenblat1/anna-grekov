@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CourseMe.module.css';
-import HishtalmutButton from '../HishtalmutButton/HishtalmutButton';
+
 import annaImage from "../../images/אנה גרקוב תמונת תדמית.webp";
 import achievement1 from "../../images/אנה הישגים לבן.webp";
 import achievement2 from "../../images/אנה הישגים 2 לבן.webp";
